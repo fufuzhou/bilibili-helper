@@ -6,6 +6,7 @@ on:
   pull_request:
     paths-ignore:
       - '**/*.md'
+  workflow_dispatch:  # 添加这行以启用手动触发
 
 permissions:
   contents: write
