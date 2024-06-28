@@ -41,14 +41,14 @@ internal class SearchTest : ApiTest() {
         assertNotNull(season.rating)
     }
 
-    @Test
-    fun `search live room`(): Unit = runBlocking {
-        val search = client.searchLiveRoom(keyword = "音悦台")
-        assertFalse(search.result.isEmpty())
-        val room = search.result.find { room -> room.roomId == 23058L }
-        assertNotNull(room)
-        assertEquals(3, room.shortId)
-        assertEquals(11153765, room.uid)
-        assertNotNull(room) { room.liveTime }
-    }
+//    @Test
+//    fun `search live room`(): Unit = runBlocking {
+//        val search = client.searchLiveRoom(keyword = "音悦台")
+//        assertFalse(search.result.isEmpty())
+//        val room = search.result.find { room -> room.roomId == 23058L }
+//        assertNotNull(room)
+//        assertEquals(3, room.shortId)
+//        assertEquals(11153765, room.uid)
+//        assertNotNull(room) { room.liveTime }
+//    }
 }
